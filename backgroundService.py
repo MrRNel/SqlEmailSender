@@ -61,7 +61,7 @@ class MyDaemonService(win32serviceutil.ServiceFramework):
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         servicemanager.Initialize()
-        servicemanager.PrepareToHostSingle(emonService)
+        servicemanager.PrepareToHostSingle(MyDaemonService)
         servicemanager.StartServiceCtrlDispatcher()
     else:
         win32serviceutil.HandleCommandLine(MyDaemonService)
